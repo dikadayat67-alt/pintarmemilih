@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Belajar | PINTAR MEMILIH</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         1. NAVIGASI WEBSITE
+    ================================== -->
+
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navigasi utama">
+        <a class="brand" href="../index.html" aria-label="PINTAR MEMILIH - Beranda">
+          <span class="brand-mark" aria-hidden="true">PM</span>
+          <span class="brand-copy"><strong>PINTAR MEMILIH</strong><small>MEDIA EDUKASI KEPEMILUAN</small></span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="../index.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>Beranda</span></a></li>
+          <li><a href="../pages/tentang.html"><span class="nav-icon" aria-hidden="true">ⓘ</span><span>Tentang</span></a></li>
+          <li><a href="../pages/pembelajaran.html"><span class="nav-icon" aria-hidden="true">▤</span><span>Materi</span></a></li>
+          <li><a href="../pages/dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span><span>Dashboard</span></a></li>
+          <li><a href="../pages/kuis.html"><span class="nav-icon" aria-hidden="true">✓</span><span>Kuis</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- =================================
+         2. JUDUL DASHBOARD
+    ================================== -->
+
+    <section class="dashboard-welcome">
+      <div class="welcome-copy"><span class="eyebrow">RUANG BELAJAR DIGITAL</span>
+        <h1>Dashboard Pembelajaran</h1>
+        <p>Pantau perjalanan belajarmu, lihat materi yang telah diselesaikan, dan persiapkan diri menjadi pemilih cerdas.</p>
+        <a href="pembelajaran.html" class="welcome-button">Lanjutkan Belajar <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="welcome-art" role="img" aria-label="Ilustrasi kotak suara dan surat suara"></div>
+    </section>
+
+    <section class="page-header dashboard-old-heading">
+
+        <h1>Dashboard Pembelajaran</h1>
+
+        <p>
+            Pantau perkembangan belajar dan
+            pencapaianmu di PINTAR MEMILIH.
+        </p>
+
+    </section>
+
+
+    <!-- =================================
+         3. KONTEN DASHBOARD
+    ================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- RINGKASAN PROGRES -->
+
+        <section class="dashboard-summary">
+
+            <div class="summary-card">
+
+                <span>Total Materi</span>
+
+                <h2 id="totalMateri">6</h2>
+
+                <p>Materi Pembelajaran</p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>Materi Selesai</span>
+
+                <h2 id="materiSelesai">0</h2>
+
+                <p>Materi telah dipelajari</p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>Progres Belajar</span>
+
+                <h2 id="persentaseProgres">0%</h2>
+
+                <p>Pencapaian pembelajaran</p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>Nilai Kuis Terakhir</span>
+
+                <h2 id="nilaiKuis">-</h2>
+
+                <p>Hasil kuis akhir</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             4. PROGRESS BAR
+        ================================== -->
+
+        <section class="dashboard-progress">
+
+            <h2>Perkembangan Pembelajaran</h2>
+
+            <p id="teksProgres">
+                Kamu belum menyelesaikan materi.
+            </p>
+
+            <div class="dashboard-progress-bar">
+
+                <div
+                    id="dashboardProgressFill"
+                    class="dashboard-progress-fill">
+                </div>
+
+            </div>
+
+            <p id="persentaseDetail">0% selesai</p>
+
+        </section>
+
+
+        <!-- =================================
+             5. DAFTAR STATUS MATERI
+        ================================== -->
+
+        <section class="dashboard-material">
+
+            <h2>Status Materi Pembelajaran</h2>
+
+            <p>
+                Berikut perkembangan enam materi
+                edukasi kepemiluan.
+            </p>
+
+            <div id="daftarStatusMateri"
+                 class="dashboard-material-list">
+
+                <!-- Data materi ditampilkan melalui JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             6. STATUS KUIS
+        ================================== -->
+
+        <section class="dashboard-quiz">
+
+            <h2>Kuis Akhir Kepemiluan</h2>
+
+            <p id="statusKuis">
+                Selesaikan enam materi untuk membuka kuis akhir.
+            </p>
+
+            <a
+                href="kuis.html"
+                id="tombolDashboardKuis"
+                class="learning-button">
+                Buka Kuis Akhir
+            </a>
+
+        </section>
+
+
+        <!-- =================================
+             7. TOMBOL LANJUT BELAJAR
+        ================================== -->
+
+        <section class="dashboard-action">
+
+            <h2>Lanjutkan Pembelajaranmu</h2>
+
+            <p>
+                Terus tingkatkan pengetahuan dan
+                pemahamanmu mengenai kepemiluan.
+            </p>
+
+            <a
+                href="pembelajaran.html"
+                class="learning-button">
+                Lihat Materi Pembelajaran
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =================================
+         8. FOOTER
+    ================================== -->
+
+    <footer>
+
+        <p>
+            &copy; <span id="tahun"></span>
+            PINTAR MEMILIH. Media Edukasi Kepemiluan.
+        </p>
+
+    </footer>
+
+
+    <!-- =================================
+         9. JAVASCRIPT
+    ================================== -->
+
+    <script src="../assets/js/script.js"></script>
+
+    <script src="../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

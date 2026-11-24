@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kuis Akhir | PINTAR MEMILIH</title>
+
+    <!-- CSS UTAMA WEBSITE -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         1. NAVIGASI WEBSITE
+    ================================== -->
+
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navigasi utama">
+        <a class="brand" href="../index.html" aria-label="PINTAR MEMILIH - Beranda">
+          <span class="brand-mark" aria-hidden="true">PM</span>
+          <span class="brand-copy"><strong>PINTAR MEMILIH</strong><small>MEDIA EDUKASI KEPEMILUAN</small></span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="../index.html"><span class="nav-icon" aria-hidden="true">⌂</span><span>Beranda</span></a></li>
+          <li><a href="../pages/tentang.html"><span class="nav-icon" aria-hidden="true">ⓘ</span><span>Tentang</span></a></li>
+          <li><a href="../pages/pembelajaran.html"><span class="nav-icon" aria-hidden="true">▤</span><span>Materi</span></a></li>
+          <li><a href="../pages/dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span><span>Dashboard</span></a></li>
+          <li><a href="../pages/kuis.html"><span class="nav-icon" aria-hidden="true">✓</span><span>Kuis</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- =================================
+         2. JUDUL HALAMAN KUIS
+    ================================== -->
+
+<div class="page-header">
+    <h1>Uji Pengetahuan Kepemiluan</h1>
+    <p>
+        Seberapa jauh kamu memahami pemilu?
+        Jawab 20 pertanyaan untuk menguji pengetahuanmu
+        tentang kepemiluan.
+    </p>
+</div>
+
+
+    <!-- =================================
+         3. INFORMASI KUIS
+    ================================== -->
+
+    <main class="material-container">
+
+        <section class="quiz-intro">
+
+            <h2>Petunjuk Pengerjaan Kuis</h2>
+
+            <p>
+                Kuis ini terdiri dari 20 soal pilihan ganda
+                yang membahas enam materi pembelajaran
+                PINTAR MEMILIH.
+            </p>
+
+            <ul>
+                <li>Jumlah soal sebanyak 20 pertanyaan.</li>
+                <li>Setiap soal memiliki empat pilihan jawaban.</li>
+                <li>Pilih satu jawaban yang menurutmu benar.</li>
+                <li>Setiap jawaban benar mendapatkan 5 poin.</li>
+                <li>Nilai maksimal yang dapat diperoleh adalah 100.</li>
+                <li>Kamu dapat mengulang kuis setelah selesai.</li>
+            </ul>
+
+            <button type="button" id="btnMulaiKuis">
+                Mulai Kuis
+            </button>
+
+        </section>
+
+
+        <!-- =================================
+             4. AREA PENGERJAAN KUIS
+        ================================== -->
+
+        <section id="quizContainer" class="quiz-container" hidden>
+
+            <!-- Informasi nomor soal -->
+
+            <div class="quiz-info">
+
+                <span id="nomorSoal">
+                    Soal 1 dari 20
+                </span>
+
+                <span id="jumlahTerjawab">
+                    Terjawab: 0/20
+                </span>
+
+            </div>
+
+
+            <!-- Progress pengerjaan -->
+
+            <div class="quiz-progress">
+
+                <div
+                    id="progressBar"
+                    class="quiz-progress-bar">
+                </div>
+
+            </div>
+
+
+            <!-- Kategori materi -->
+
+            <p id="kategoriSoal" class="quiz-category">
+                Materi 1: Pengenalan KPU
+            </p>
+
+
+            <!-- Pertanyaan -->
+
+            <h2 id="pertanyaanSoal">
+                Pertanyaan akan ditampilkan di sini.
+            </h2>
+
+
+            <!-- Pilihan jawaban -->
+
+            <div id="pilihanJawaban" class="quiz-options">
+
+                <!-- Pilihan jawaban dibuat otomatis oleh JavaScript -->
+
+            </div>
+
+
+            <!-- Tombol navigasi soal -->
+
+            <div class="quiz-navigation">
+
+                <button
+                    type="button"
+                    id="btnSebelumnya"
+                    disabled>
+                    Sebelumnya
+                </button>
+
+                <button
+                    type="button"
+                    id="btnSelanjutnya">
+                    Selanjutnya
+                </button>
+
+                <button
+                    type="button"
+                    id="btnSelesai"
+                    hidden>
+                    Selesaikan Kuis
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             5. HASIL AKHIR KUIS
+        ================================== -->
+
+        <section id="hasilKuis" class="quiz-result" hidden>
+
+            <h2>Hasil Kuis PINTAR MEMILIH</h2>
+
+            <p>
+                Selamat! Kamu telah menyelesaikan
+                seluruh pertanyaan kuis.
+            </p>
+
+
+            <!-- Nilai akhir -->
+
+            <div class="quiz-score">
+
+                <span>Nilai Akhir</span>
+
+                <h3 id="nilaiAkhir">
+                    0
+                </h3>
+
+                <p id="predikatNilai">
+                    Hasil penilaian akan ditampilkan di sini.
+                </p>
+
+            </div>
+
+
+            <!-- Rincian jawaban -->
+
+            <div class="quiz-statistics">
+
+                <div class="quiz-stat-card">
+
+                    <h3 id="jawabanBenar">0</h3>
+
+                    <p>Jawaban Benar</p>
+
+                </div>
+
+
+                <div class="quiz-stat-card">
+
+                    <h3 id="jawabanSalah">0</h3>
+
+                    <p>Jawaban Salah</p>
+
+                </div>
+
+
+                <div class="quiz-stat-card">
+
+                    <h3 id="totalSoal">20</h3>
+
+                    <p>Total Soal</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tombol mengulang kuis -->
+
+            <button type="button" id="btnUlangiKuis">
+                Ulangi Kuis
+            </button>
+
+            <a href="pembelajaran.html" class="learning-button">
+                Kembali ke Materi
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         6. FOOTER WEBSITE
+    ================================== -->
+
+    <footer>
+
+        <p>
+            &copy; <span id="tahun"></span>
+            PINTAR MEMILIH. Media Edukasi Kepemiluan.
+        </p>
+
+    </footer>
+
+
+    <!-- =================================
+         7. JAVASCRIPT
+    ================================== -->
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/progres.js"></script>
+    <script src="../assets/js/kuis.js"></script>
+
+</body>
+
+</html>
